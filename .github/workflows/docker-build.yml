@@ -29,16 +29,16 @@ jobs:
 
       - name: Tag & push gateway-service image
         run: |
-          docker tag microservices-project-gateway-service:latest yourdockerhubuser/gateway-service:latest
-          docker push yourdockerhubuser/gateway-service:latest
+          docker tag microservices-project-gateway-service:latest shashanksomenahalli/gateway-service:latest
+          docker push shashanksomenahalli/gateway-service:latest
 
       - name: Tag & push user-service image
         run: |
-          docker tag microservices-project-user-service:latest yourdockerhubuser/user-service:latest
-          docker push yourdockerhubuser/user-service:latest
+          docker tag microservices-project-user-service:latest shashanksomenahalli/user-service:latest
+          docker push shashanksomenahalli/user-service:latest
 
       - name: Tag & push task-service image
         run: |
-          docker tag microservices-project-task-service:latest yourdockerhubuser/task-service:latest
-          docker push yourdockerhubuser/task-service:latest
+          docker tag microservices-project-task-service:latest shashanksomenahalli/task-service:latest
+          docker push shashanksomenahalli/task-service:latest
 
