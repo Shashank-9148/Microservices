@@ -18,8 +18,8 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build services via docker-compose
-        run: docker-compose build
+      - name: Build services via docker compose
+        run: docker compose build
 
       - name: Tag & push gateway-service image
         run: |
