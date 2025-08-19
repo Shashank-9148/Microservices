@@ -18,8 +18,14 @@ jobs:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
-      - name: Build services via docker compose
-        run: docker compose build
+      - name: Build gateway-service image
+        run: docker build -t microservices-project-gateway-service ./gateway-service
+
+      - name: Build user-service image
+        run: docker build -t microservices-project-user-service ./user-service
+
+      - name: Build task-service image
+        run: docker build -t microservices-project-task-service ./task-service
 
       - name: Tag & push gateway-service image
         run: |
@@ -35,3 +41,4 @@ jobs:
         run: |
           docker tag microservices-project-task-service:latest yourdockerhubuser/task-service:latest
           docker push yourdockerhubuser/task-service:latest
+
